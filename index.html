@@ -7,6 +7,7 @@
     <title>Formation HTML5 - CSS3</title>
     <!-- commentaire en HTML -->
     <!-- les appels vers le CSS ou les JS se feront dans le HEAD -->
+
 </head>
 
 <body>
@@ -29,7 +30,96 @@
 
         </section>
         <section class="liste-article">
-
+            <div>
+                Nos derniers articles
+            </div>
+            <article>
+                <header>
+                    <h2>HTML sur du texte</h2>
+                </header>
+                <main>
+                    <p>
+                        IL existe quelques balises qui changent l'apparence du texte.
+                        En <b>gras</b> <code>&lt;b&gt;</code>, aucun impact sur le SEO ou en <strong>gras</strong>,
+                        <code>&lt;strong&gt;</code>, impacte le SEO.
+                    </p>
+                    <p>
+                        Il en est de même pour <i>l'italique</i>, <code>&lt;i&gt;</code>, de l'italique visuel sans
+                        impact sur le SEO et <em>l'italique</em>, <code>&lt;em&gt;</code>, qui met l'accent sur ce
+                        contenu en italique
+                    </p>
+                    <p>
+                        la balise <code>&lt;font&gt;</code> servait autrefois à changer la couleur, la police et la
+                        taille du text à l'intérieur. Elle est dépréciée, <br />lue par la majorité des navigateurs mais
+                        ne correspond plus aux standards W3C (World Wide Web Consortium).
+                        On utilisera en revanche <code>&lt;span&gt;</code>
+                        <span style="color:rgb(103, 15, 15); font-weight: bold;">associée</span>
+                        soit à du CSS (id, class) ou à du style directement écrit dans l'attribut style de la balise.
+                    </p>
+                    <p>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les blocs de type paragraphe</h2>
+                </header>
+                <main>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio fugiat maiores, laborum
+                        officiis aperiam, possimus expedita, molestiae vero ipsa voluptates nam aliquid repellendus
+                        eligendi voluptatibus reprehenderit inventore. Eaque, aperiam?
+                    </p>
+                    <pre>
+Lorem ipsum
+dolor sit amet 
+consectetur, 
+adipisicing elit. 
+Unde explicabo, 
+eligendi modi.
+                    </pre>
+                    <blockquote>
+                        <q>aller de là à de là</q><br />
+                        <cite>Numérobis</cite>
+                    </blockquote>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>En complément</h2>
+                </header>
+                <main>
+                    <ol>
+                        <li><a href="https://www.creativebloq.com/" title="creative bloq, site de veille web et design">
+                            Creative bloq
+                        </a></li>
+                        <li><a href="https://icons.getbootstrap.com/">Bootstrap icons</a></li>
+                        <li><a href="https://www.dafont.com/fr/">Dafont</a></li>
+                    </ol>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
         </section>
     </main>
     <footer>
