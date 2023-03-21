@@ -1,0 +1,10 @@
+body > nav,
+body > footer{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
+}

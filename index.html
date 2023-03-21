@@ -7,7 +7,8 @@
     <title>Formation HTML5 - CSS3</title>
     <!-- commentaire en HTML -->
     <!-- les appels vers le CSS ou les JS se feront dans le HEAD -->
-
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 
 <body>
@@ -140,9 +141,72 @@ eligendi modi.
                     </p>
                     <h3>La balise img</h3>
                     <div class="affiche-image">
-                        <img src="" alt="" />
+                        <img src="./images/poster-twitch-synthwave.jpg" alt="Poster Twitch synthwave par James White"  />
                         <div class="legende-image">
-                            Légende de l'image
+                            Poster Twitch synthwave par James White
+                        </div>
+                    </div>
+                    <h3>Une balise img avec la balise figure</h3>
+                    <figure>
+                        <img src="./images/gundam-plane-to-robot.gif" alt="Transformation avion vers robot"  />
+                        <figcaption>
+                            Transformation avion vers robot
+                        </figcaption>
+                    </figure>
+                    <!--
+                    <h3>Picture, élément d'image pour l'adaptatif</h3>
+                    <picture>
+                        <source srcset="./images/poster-twitch-synthwave.jpg" media="(min-width: 600px)" />
+                        <img src="./images/gundam-plane-to-robot.gif" />
+                    </picture>
+                    -->
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <h3>Le box-sizing</h3>
+                    <p>
+                        Le box-sizing est la façon dont les largeur et hauteur d'un élément sont représentés sur la page.
+                        Par défaut, c'est calculé par le contenu le contenu.
+                        C'est à dire : si la largeur est 200px, la marge intérieur 5px et la bordure 3px, 
+                        la largeur totale de l'élement à l'extérieur des bordures sera de 200 + 5 + 5 + 3 + 3 = 221px
+                    </p>
+                    <p>
+                        pour palier à cela, il faut préciser que tous les éléments de la page seront calculés par rapport 
+                        à l'extérieur des bordures.
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie"></div>
+                        <div class="moitie"></div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie"></div>
+                        <div class="moitie"></div>
+                    </div>
+                    <p>
+                        Les tailles calculées : utiliser le cadratin (em) est problématique, car une taille défini en em se 
+                        réfère à la taille absolue des polices de l'élément contenant
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
                         </div>
                     </div>
                 </main>
