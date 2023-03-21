@@ -1,3 +1,4 @@
+@import url("wonderland2.css");
 /*
 dimension les plus vues en web :
 px      =>  Pixel
@@ -19,13 +20,29 @@ si 2rem = 32 px, 1rem = 16px
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1rem;
     line-height: 1.4rem;
+    /* utiliser des variables en CSS */
+    --heading-font: 'wonderland2';
 }
+
+/* déclarations générales */
 
 *, 
 *::before,
 *::after{
     box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+    letter-spacing: 0.1rem;
+}
+
+h1{
+    line-height: 2rem;
+    margin: 0;
+}
+
+/* déclarations de classes */
 
 .test-content-box div{
     box-sizing: content-box;
@@ -47,3 +64,37 @@ si 2rem = 32 px, 1rem = 16px
     font-size: 2rem;
     border: 1px solid black;
 }
+
+.h1 {
+    display: block;
+    font-size: 2rem;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+/* déclaration de structure */
+body{
+    margin: 0;
+}
+
+body > header{
+    padding: 1rem;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body > nav{
+
+}
+
+/* media queries pour l'adaptatif */
+
