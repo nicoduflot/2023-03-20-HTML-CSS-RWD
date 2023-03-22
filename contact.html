@@ -9,6 +9,21 @@
     <!-- les appels vers le CSS ou les JS se feront dans le HEAD -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
+    <script src="./js/dfd-script.js"></script>
+    <script>
+         loaded(function(){
+            let couleur = q('#couleur');
+            console.log(couleur);
+            couleur.addEventListener('change', function(){
+                q('#colorSelected').innerHTML = this.value;
+            });
+
+            let luminosite = q('#luminosite');
+            luminosite.addEventListener('change', function(){
+                q('#lumSelected').innerHTML = this.value;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -73,10 +88,103 @@
                                 <label for="nom">Nom :</label>
                                 <input type="text" name="nom" id="nom" aria-describedby="infoNom" placeholder="Votre nom ici" autofocus required />
                             </p>
-                            <div id="infoNom">
+                            <div class="form-info" id="infoNom">
                                 Dans ce champs, écrivez votre nom de famille
                             </div>
+                            <p>
+                                <label for="prenom">Prénom :</label>
+                                <input type="text" name="prenom" id="prenom" aria-describedby="infoPrenom" placeholder="Votre prénom ici" />
+                            </p>
+                            <div class="form-info" id="infoPrenom">
+                                Dans ce champs, écrivez votre prénom
+                            </div>
+                            <p>
+                                <label for="email">Email :</label>
+                                <input type="email" name="email" id="email" placeholder="Votre email ici" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,12}$" required />
+                            </p>
+                            <p>
+                                <label for="telephone">Téléphone :</label>
+                                <input type="tel" name="telephone" id="telephone" placeholder="Votre téléphone ici" />
+                            </p>
                         </fieldset>
+                        <fieldset>
+                            <legend>
+                                Votre demande d'échantillon
+                            </legend>
+                            <p>
+                                <label for="votreBesoin">
+                                    Description de votre besoin
+                                </label>
+                            </p>
+                            <p>
+                                <textarea name="votreBesoin" id="votreBesoin" placeholder="Décrivez votre besoin"></textarea>
+                            </p>
+                            <p>
+                                <label for="materiaux">
+                                    Type de tissus
+                                </label>
+                                <select name="materiaux" id="materiaux">
+                                    <option value="invalid">Choix du tissu</option>
+                                    <optgroup label="Occultant">
+                                        <option value="M1">Occultant M1</option>
+                                        <option value="M2">Occultant M2</option>
+                                        <option value="M3">Occultant M3</option>
+                                    </optgroup>
+                                    <optgroup label="Anti-feu">
+                                        <option value="A1">Anti-feu A1</option>
+                                        <option value="A2">Anti-feu A3</option>
+                                        <option value="A3">Anti-feu A3</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="couleur">Couleur</label>
+                                <input type="color" name="couleur" id="couleur" aria-describedby="info-couleur" />
+                                <span id="colorSelected"></span>
+                            </p>
+                            <div class="form-info " id="info-couleur">
+                                Dans ce champs, entrez l'adresse de votre site web.
+                            </div>
+                            <p>
+                                <label for="luminosite">Luminosité</label>
+                                <input type="range" name="luminosite" id="luminosite" min="0" max="5" step="0.5"
+                                    aria-describedby="info-luminosite" />
+                                <span id="lumSelected"></span>
+                            </p>
+                            <div class="form-info " id="info-luminosite">
+                                Dans ce champs, indiquez la luminosité du site : 0 pour très sombre à 5 pour très
+                                lumineux.
+                            </div>
+                            <p>
+                                <label for="dateLimiteEnvoi">Date Limite</label>
+                                <input type="date" name="dateLimiteEnvoi" id="dateLimiteEnvoi"
+                                    aria-describedby="info-dateLimiteEnvoi" />
+                            </p>
+                            <div class="form-info " id="info-dateLimiteEnvoi">
+                                Dans ce champs, indiquez la date après laquelle vous voulez l'échantillon
+                            </div>
+                            <p class="radio-check">
+                                <label>
+                                    Les moyens pour vous contacter
+                                </label>
+                                <input type="checkbox" name="contact-mail" id="contact-mail" />
+                                <label for="contact-mail">Par email</label>
+                                <input type="checkbox" name="contact-telephone" id="contact-telephone" />
+                                <label for="contact-telephone">Par téléphone</label>
+                                <input type="checkbox" name="contact-courrier" id="contact-courrier" />
+                                <label for="contact-courrier">Par courrier</label>
+                            </p>
+                            <p class="radio-check">
+                                <label>La demande est pour :</label>
+                                <input type="radio" name="type-personne" id="personne-physique" value="physique" checked
+                                    aria-checked="true" />
+                                <label for="personne-physique">Personne physique</label>
+                                <input type="radio" name="type-personne" id="personne-morale" value="morale" />
+                                <label for="personne-morale">Personne morale</label>
+                            </p>
+                        </fieldset>
+                        <input type="hidden" name="cache" id="cache"
+                            value="ceci est une info cachée à la vue de l'utilisateur" />
                         <p>
                             <button type="submit">Envoyer</button>
                             <button type="reset">Vider le formulaire</button>
