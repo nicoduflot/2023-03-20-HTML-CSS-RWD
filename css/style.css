@@ -28,6 +28,20 @@ si 2rem = 32 px, 1rem = 16px
     --colonne-2-3: 66%;
     --colonne-1-4: 25%;
     --colonne-3-4: 75%;
+    --general-link: #F22233;
+    --nav-link-color:#F2EBDC;
+    --nav-link-color-bg-hover:#40382A;
+    --main-bg-color: #F2EBDC;
+    --header-h1-color: #F2EBDC;
+    --main-font-color: rgb(33, 37, 41);
+    --page-header-bg-color: #736451;
+    --main-nav-bg-color: #736451;
+    --main-footer-bg-color: #736451;
+    --vert-paques: #668C2B;
+    --h1-font-color: #F22E3E;
+    /*--special-bg: linear-gradient(to bottom, var(--vert-paques), var(--page-header-bg-color) 90%) ,var(--page-header-bg-color);*/
+    --special-bg: url('../images/alice-cards-design.jpg') center center no-repeat;
+    color: var(--main-font-color);
 }
 
 /* déclarations générales */
@@ -46,12 +60,13 @@ h1, h2, h3, h4, h5, h6{
 h1{
     line-height: 2rem;
     margin: 0;
+    /*color: var(--h1-font-color);*/
 }
 
 a,
 a:visited{
     text-decoration: none;
-    color: darkgreen;
+    color: var(--general-link);
     text-transform: uppercase;
 }
 
@@ -98,6 +113,7 @@ img{
 /* déclaration de structure */
 body{
     margin: 0;
+    background-color: var(--main-bg-color);
 }
 
 body > header{
@@ -107,10 +123,19 @@ body > header{
     justify-content: center;
     align-items: center;
     text-align: center;
+    /*background:  linear-gradient(to bottom, #668C2B, var(--page-header-bg-color) 90%) ,var(--page-header-bg-color);*/
+    background:  var(--special-bg);
+    background-size: cover;
+}
+
+body > header h1,
+body > header .h1{
+    color: var(--header-h1-color);
+    text-shadow: 0px 0px 5px black;
 }
 
 body > nav{
-
+    background-color: var(--main-nav-bg-color);
 }
 
 body > nav ul, 
@@ -133,18 +158,21 @@ body > footer nav ul li{
 }
 
 body > nav ul a,
-body > footer nav ul a
+body > footer nav ul a,
+body > nav ul a:visited,
+body > footer nav ul a:visited
 {
     display: block;
     padding-left: 2rem;
     padding-right: 2rem;
+    color: var(--nav-link-color);
 }
 
 body > nav ul a:hover,
 body > nav ul a:focus,
 body > footer nav ul a:hover,
 body > footer nav ul a:focus{
-    background-color: black;
+    background-color: var(--nav-link-color-bg-hover);
     color: white;
 }
 
@@ -159,6 +187,7 @@ body > main{
 
 body > footer{
     padding: 1rem;
+    background-color: var(--main-footer-bg-color);
 }
 
 
