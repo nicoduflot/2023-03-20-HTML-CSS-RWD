@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 - CSS3</title>
+    <!-- commentaire en HTML -->
+    <!-- les appels vers le CSS ou les JS se feront dans le HEAD -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+</head>
+
+<body>
+    <header>
+        <h1>Formation HTML5 - CSS3</h1>
+    </header>
+    <nav>
+        <div class="nav-center">
+            <ul>
+                <li><a href="./" target="_self" title="Lien vers la page d'accueil">Accueil</a></li>
+                <li><a href="./article.html" target="_self" title="Lien vers la page Article">Article</a></li>
+                <li><a href="./contact.html" target="_self" title="Lien vers la page Contact">Contact</a></li>
+                <li><a href="./media.html" target="_self" title="Lien vers la page Media">Media</a></li>
+                <li><a href="./animation.html" target="_self" title="Lien vers la page Animation">Animation</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="liste-article">
+            <div class="h1">
+                Les media en HTML
+            </div>
+        </section>
+        <section class="liste-article">
+            <article>
+                <header>
+                    <h2>Les vidéos hébergées sur le site</h2>
+                </header>
+                <main>
+                    <p>
+                        On utilise la balise <code>&lt;video&gt;</code>
+                    </p>
+                    <p>
+                        La source de la vidéo est directement indiquée dans l'attribut src, attention, si le navigateur
+                        n'est pas capable de lire la vidéo, elle ne s'affiche pas.
+                    </p>
+                    <video src="./media/videos/Fallout-4-Launch-Trailer.mp4" controls muted preload="auto"></video>
+                    <p>
+                        Si on dispose de plusieurs format de la même vidéo (dimension, extension), on peut indiquer
+                        plusieurs
+                        sources, le navigateur choisira celle qui est la plus adaptée.
+                    </p>
+                    <video controls preload="auto">
+                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/videos/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les vidéos hébergées sur un site tier</h2>
+                </header>
+                <main>
+                    <p>
+                        Des sites tels que Youtube et dailymotion donnent la possibilité
+                        d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.<br />
+                        L'iframe est une balise qui permet d'appeler une page
+                        d'un autre site (ou du site actuel) dans un cadre délimité.<br />
+                        Il faut toutefois que le site ciblé autorise les iframes
+                    </p>
+                    <h4>Youtube</h4>
+                    <figure class="video ratio-16-9">
+                        <iframe src="https://www.youtube.com/embed/siy9ETx68NU" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </figure>
+                    <h4>Dailymotion</h4>
+                    <figure class="video ratio-16-9">
+                        <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xpl8r"
+                            width="100%" height="100%" allowfullscreen title="Dailymotion Video Player"></iframe>
+                    </figure>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Iframe</h2>
+                </header>
+                <main>
+                    <p>
+                        L'iframe est un cadre capable d'appeler un fichier dans une page
+                    </p>
+                    <div class="pdf ratio-1-1">
+                        <iframe src="./iframe01.html"></iframe>
+                    </div>
+
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Iframe suite</h2>
+                </header>
+                <main>
+                    <ul>
+                        <li><a href="./ressources/PP3.pdf" target="myPdf">PP3</a></li>
+                        <li><a href="./ressources/uxpin_web_ui_design_for_the_human_eye_1.pdf" target="myPdf">UXPIN</a>
+                        </li>
+                    </ul>
+                    <div class="pdf ratio-21-29">
+                        <iframe name="myPdf" src="./ressources/PP3.pdf"></iframe>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+
+            <article>
+
+                <header>
+                    <h2>Iframe suite</h2>
+                </header>
+                <main>
+                    <div class="pdf ratio-1-1">
+                        <iframe src="./documents/books.xml"></iframe>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h2>Iframe suite</h2>
+                </header>
+                <main>
+                    <div class="pdf ratio-1-1">
+                        <iframe src="./documents/texte.txt"></iframe>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section class="liste-article">
+            <div class="h1">
+                L'audio
+            </div>
+        </section>
+        <section class="liste-article">
+            <article>
+                <header>
+                    <h2>Les images</h2>
+                </header>
+                <main>
+                    <p>
+                        La balise <code>&lt;audio&gt;</code>.
+                    </p>
+                    <figure>
+                        <audio controls preload="auto">
+                            <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
+                    </figure>
+                    <h3>L'audio hébergé sur des sites tiers</h3>
+                    <h4>Soundcloud</h4>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1301981875&color=%2376b9d5&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/the-sign" title="The Sign" target="_blank" style="color: #cccccc; text-decoration: none;">The Sign</a></div>
+                    <h4>Bandcamp</h4>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3828771716/size=small/bgcol=ffffff/linkcol=0687f5/track=3188101176/transparent=true/" seamless><a href="https://weswaltz.bandcamp.com/album/more-is-more">More Is More by Wes Waltz</a></iframe>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <nav class="nav-center">
+            <div class="colonne-footer">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="./" target="_self">Accueil</a></li>
+                    <li><a href="./article.html" target="_self">Article</a></li>
+                    <li><a href="./contact.html" target="_self">Contact</a></li>
+                    <li><a href="./media.html" target="_self">Media</a></li>
+                    <li><a href="./animation.html" target="_self">Animation</a></li>
+                </ul>
+            </div>
+            <div class="colonne-footer">
+                <h3>L'association</h3>
+                <ul>
+                    <li><a href="#" target="_self">Qui-sommes-nous</a></li>
+                    <li><a href="#" target="_self">Nous trouver</a></li>
+                    <li><a href="#" target="_self">CGV</a></li>
+                </ul>
+            </div>
+            <div class="colonne-footer">
+                <h3>Nos partenaires</h3>
+                <ul>
+                    <li><a href="#" target="_self">bla bla</a></li>
+                    <li><a href="#" target="_self">bla bla</a></li>
+                    <li><a href="#" target="_self">bla bla</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -29,6 +29,10 @@ si 2rem = 32 px, 1rem = 16px
     --colonne-2-3: calc( 66% - 2*(var(--gutter-x)) );
     --colonne-1-4: calc( 25% - 2*(var(--gutter-x)) );
     --colonne-3-4: calc( 75% - 2*(var(--gutter-x)) );
+    --ratio-1-1: 100%;
+    --ratio-16-9: 56.25%;
+    --ratio-4-3: 75%;
+    --ratio-21-9: 42.9%;
     --general-link: #F22233;
     --nav-link-color:#F2EBDC;
     --nav-link-color-bg-hover:#40382A;
@@ -71,7 +75,8 @@ a:visited{
     text-transform: uppercase;
 }
 
-img{
+img,
+video{
     max-width: 100%;
 }
 
@@ -109,6 +114,37 @@ img{
     font-family: var(--heading-font);
     letter-spacing: 0.1rem;
     line-height: 2rem;
+}
+
+.ratio-16-9{
+    padding-bottom: var(--ratio-16-9);
+}
+.ratio-1-1{
+    padding-bottom: var(--ratio-1-1);
+}
+.ratio-21-9{
+    padding-bottom: var(--ratio-21-9);
+}
+.ratio-4-3{
+    padding-bottom: var(--ratio-4-3);
+}
+
+.ratio-21-29{
+    padding-bottom: 142%;
+}
+
+.video,
+.pdf{
+    position: relative;
+}
+
+.video > *,
+.pdf > *{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* déclaration de structure */
@@ -176,6 +212,11 @@ body > main section article{
     width: var(--colonne-1-1);
     margin-left: var(--gutter-x);
     margin-right: var(--gutter-x);
+}
+
+body > main section > article:last-of-type:first-of-type{
+
+    width: var(--colonne-1-1);
 }
 
 
