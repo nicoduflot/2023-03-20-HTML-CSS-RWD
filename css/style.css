@@ -221,6 +221,19 @@ video {
     border-color: var(--info-autre-border);
 }
 
+.swiper img{
+    max-height: 400px;
+}
+
+.swiper-slide > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-swiper{
+    text-align: center;
+}
+
 /* déclaration de structure */
 body {
   margin: 0;

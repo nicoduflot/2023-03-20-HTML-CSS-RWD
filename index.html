@@ -9,6 +9,34 @@
     <!-- les appels vers le CSS ou les JS se feront dans le HEAD -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
+    <link rel="stylesheet" href="./css/swiper-bundle.css" media="screen" />
+    <script src="./js/dfd-script.js"></script>
+    <script src="./js/swiper-bundle.js"></script>
+    <script>
+        loaded(function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -28,7 +56,56 @@
     </nav>
     <main>
         <section id="carousel">
+            <div class="h1">
+                Galerie
+            </div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper center-swiper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./images/drive-signal.png" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./images/dolf-signal.png" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./images/doc-signal.png" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="./images/james-white-composite.jpg" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
         </section>
         <section class="liste-article">
             <div class="h1">
@@ -109,8 +186,8 @@ eligendi modi.
                 <main>
                     <ol>
                         <li><a href="https://www.creativebloq.com/" title="creative bloq, site de veille web et design">
-                            Creative bloq
-                        </a></li>
+                                Creative bloq
+                            </a></li>
                         <li><a href="https://icons.getbootstrap.com/">Bootstrap icons</a></li>
                         <li><a href="https://www.dafont.com/fr/">Dafont</a></li>
                     </ol>
@@ -139,20 +216,21 @@ eligendi modi.
                         Par défaut, on peut afficher une image à l'aide de la balise <code>&lt;img /&gt;</code>.
                     </p>
                     <p>
-                        Avec HTML5, une balise d'encadrement de media a été créé, <code>&lt;figure&gt;</code>. 
-                        Figure peut servire de cadre, et elle possède en plus une balise enfant optionnelle, <code>&lt;figcaption&gt;</code>,
+                        Avec HTML5, une balise d'encadrement de media a été créé, <code>&lt;figure&gt;</code>.
+                        Figure peut servire de cadre, et elle possède en plus une balise enfant optionnelle,
+                        <code>&lt;figcaption&gt;</code>,
                         qui permet d'ajouter une légende à l'image.
                     </p>
                     <h3>La balise img</h3>
                     <div class="affiche-image">
-                        <img src="./images/poster-twitch-synthwave.jpg" alt="Poster Twitch synthwave par James White"  />
+                        <img src="./images/poster-twitch-synthwave.jpg" alt="Poster Twitch synthwave par James White" />
                         <div class="legende-image">
                             Poster Twitch synthwave par James White
                         </div>
                     </div>
                     <h3>Une balise img avec la balise figure</h3>
                     <figure>
-                        <img src="./images/gundam-plane-to-robot.gif" alt="Transformation avion vers robot"  />
+                        <img src="./images/gundam-plane-to-robot.gif" alt="Transformation avion vers robot" />
                         <figcaption>
                             Transformation avion vers robot
                         </figcaption>
@@ -180,13 +258,15 @@ eligendi modi.
                 <main>
                     <h3>Le box-sizing</h3>
                     <p>
-                        Le box-sizing est la façon dont les largeur et hauteur d'un élément sont représentés sur la page.
+                        Le box-sizing est la façon dont les largeur et hauteur d'un élément sont représentés sur la
+                        page.
                         Par défaut, c'est calculé par le contenu le contenu.
-                        C'est à dire : si la largeur est 200px, la marge intérieur 5px et la bordure 3px, 
+                        C'est à dire : si la largeur est 200px, la marge intérieur 5px et la bordure 3px,
                         la largeur totale de l'élement à l'extérieur des bordures sera de 200 + 5 + 5 + 3 + 3 = 221px
                     </p>
                     <p>
-                        pour palier à cela, il faut préciser que tous les éléments de la page seront calculés par rapport 
+                        pour palier à cela, il faut préciser que tous les éléments de la page seront calculés par
+                        rapport
                         à l'extérieur des bordures.
                     </p>
                     <div class="test-content-box">
@@ -198,7 +278,8 @@ eligendi modi.
                         <div class="moitie"></div>
                     </div>
                     <p>
-                        Les tailles calculées : utiliser le cadratin (em) est problématique, car une taille défini en em se 
+                        Les tailles calculées : utiliser le cadratin (em) est problématique, car une taille défini en em
+                        se
                         réfère à la taille absolue des polices de l'élément contenant
                     </p>
                     <div class="deuxEm">
