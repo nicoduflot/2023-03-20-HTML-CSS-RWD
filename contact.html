@@ -14,11 +14,13 @@
          loaded(function(){
             let couleur = q('#couleur');
             console.log(couleur);
+            q('#colorSelected').innerHTML = couleur.value;
             couleur.addEventListener('change', function(){
                 q('#colorSelected').innerHTML = this.value;
             });
 
             let luminosite = q('#luminosite');
+            q('#lumSelected').innerHTML = luminosite.value;
             luminosite.addEventListener('change', function(){
                 q('#lumSelected').innerHTML = this.value;
             });
@@ -155,7 +157,7 @@
                                 Dans ce champs, indiquez la luminosité du site : 0 pour très sombre à 5 pour très
                                 lumineux.
                             </div>
-                            <p>
+                            <p class="stack">
                                 <label for="dateLimiteEnvoi">Date Limite</label>
                                 <input type="date" name="dateLimiteEnvoi" id="dateLimiteEnvoi"
                                     aria-describedby="info-dateLimiteEnvoi" />
