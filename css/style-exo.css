@@ -1,0 +1,422 @@
+@import url("wonderland2.css");
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+si 2rem = 32 px, 1rem = 16px
+*/
+
+/* on peut "surcharger" la racine du css de la page */
+
+:root {
+    /* utiliser des variables en CSS */
+    --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--font-family);
+  --font-size: 1.2rem;
+  --input-font-size: 1rem;
+  font-size: var(--font-size);
+  --line-height: 1.4rem;
+  line-height: var(--line-height);
+  --heading-font: "wonderland2";
+  --gutter-x: 0.5rem;
+  --colonne-1-5: calc(20% - 2 * (var(--gutter-x)));
+  --colonne-1-4: calc(25% - 2 * (var(--gutter-x)));
+  --colonne-1-3: calc(33% - 2 * (var(--gutter-x)));
+  --colonne-2-5: calc(40% - 2 * (var(--gutter-x)));
+  --colonne-1-2: calc(50% - 2 * (var(--gutter-x)));
+  --colonne-3-5: calc(60% - 2 * (var(--gutter-x)));
+  --colonne-2-3: calc(66% - 2 * (var(--gutter-x)));
+  --colonne-3-4: calc(75% - 2 * (var(--gutter-x)));
+  --colonne-4-5: calc(80% - 2 * (var(--gutter-x)));
+  --colonne-1-1: calc(100% - 2 * (var(--gutter-x)));
+  --ratio-1-1: 100%;
+  --ratio-16-9: 56.25%;
+  --ratio-4-3: 75%;
+  --ratio-21-9: 42.9%;
+  --general-link: #f22233;
+  --nav-link-color: #f2ebdc;
+  --nav-link-color-bg-hover: #40382a;
+  --main-bg-color: #f2ebdc;
+  --header-h1-color: #f2ebdc;
+  --main-font-color: rgb(33, 37, 41);
+  --page-header-bg-color: #736451;
+  --main-nav-bg-color: #736451;
+  --main-footer-bg-color: #736451;
+  --vert-paques: #668c2b;
+  --h1-font-color: #f22e3e;
+  /*--special-bg: linear-gradient(to bottom, var(--vert-paques), var(--page-header-bg-color) 90%) ,var(--page-header-bg-color);*/
+  --special-bg: url("../images/alice-cards-design.jpg") center center no-repeat;
+  color: var(--main-font-color);
+}
+
+/* déclarations générales */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  letter-spacing: 0.1rem;
+}
+
+input,
+select,
+textarea{
+    font-size: var(--input-font-size);
+}
+
+h1 {
+  line-height: 2rem;
+  margin: 0;
+  /*color: var(--h1-font-color);*/
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--general-link);
+  text-transform: uppercase;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.stack input{
+  line-height: var(--line-height);
+}
+
+.radio-check label{
+    width: var(--colonne-1-1);    
+}
+
+.radio-check label[for]{
+    width: var(--colonne-3-4);
+}
+
+.radio-check input{
+    width: var(--colonne-1-5);
+}
+
+/* déclarations de classes */
+
+.test-content-box div {
+  box-sizing: content-box;
+}
+
+.moitie {
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+.deuxEm {
+  font-size: 2em;
+  border: 1px solid black;
+}
+
+.deuxRem {
+  font-size: 2rem;
+  border: 1px solid black;
+}
+
+.h1 {
+  display: block;
+  font-size: 2rem;
+  margin-block-start: 0.67rem;
+  margin-block-end: 0.67rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: var(--heading-font);
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+.ratio-16-9 {
+  padding-bottom: var(--ratio-16-9);
+}
+.ratio-1-1 {
+  padding-bottom: var(--ratio-1-1);
+}
+.ratio-21-9 {
+  padding-bottom: var(--ratio-21-9);
+}
+.ratio-4-3 {
+  padding-bottom: var(--ratio-4-3);
+}
+
+.ratio-21-29 {
+  padding-bottom: 142%;
+}
+
+.video,
+.pdf {
+  position: relative;
+}
+
+.video > *,
+.pdf > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* déclaration de structure */
+body {
+  margin: 0;
+  background-color: var(--main-bg-color);
+}
+
+body > header {
+  padding: 1rem;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*background:  linear-gradient(to bottom, #668C2B, var(--page-header-bg-color) 90%) ,var(--page-header-bg-color);*/
+  background: var(--special-bg);
+  background-size: cover;
+}
+
+body > header h1,
+body > header .h1 {
+  color: var(--header-h1-color);
+  text-shadow: 0px 0px 5px black;
+}
+
+body > nav {
+  background-color: var(--main-nav-bg-color);
+}
+
+body > nav ul,
+body > footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2rem;
+  margin: 0;
+}
+
+body > nav ul a,
+body > footer nav ul a,
+body > nav ul a:visited,
+body > footer nav ul a:visited {
+  display: block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--nav-link-color);
+}
+
+body > nav ul a:hover,
+body > nav ul a:focus,
+body > footer nav ul a:hover,
+body > footer nav ul a:focus {
+  background-color: var(--nav-link-color-bg-hover);
+  color: white;
+}
+
+body > main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main section article {
+  width: var(--colonne-1-1);
+  margin-left: var(--gutter-x);
+  margin-right: var(--gutter-x);
+}
+
+body > main section > article:last-of-type:first-of-type {
+  width: var(--colonne-1-1);
+}
+
+body > main > section article form p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body > main > section article form fieldset{
+    border-radius: 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 3px solid var(--main-nav-bg-color);
+}
+
+body > main > section article form fieldset legend{
+    background-color: var(--main-nav-bg-color);
+    color: var(--nav-link-color);
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+body > main > section article form p input[type="text"],
+body > main > section article form p input[type="email"],
+body > main > section article form p input[type="tel"]{
+  width: var(--colonne-1-1);
+  line-height: var(--line-height);
+}
+
+body > main > section article form p select{
+    width: var(--colonne-1-1);
+    height: var(--line-height);
+}
+
+body > main > section article form p textarea {
+  width: var(--colonne-1-1);
+  height: 40vh;
+}
+
+body > footer {
+  padding: 1rem;
+  background-color: var(--main-footer-bg-color);
+}
+
+/* media queries pour l'adaptatif */
+
+@media (min-width: 576px) {
+  .nav-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stack label{
+    width: var(--colonne-1-1);
+  }
+
+  body > main,
+  .nav-center {
+    width: 540px;
+  }
+
+  body > nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  body > nav ul li,
+  body > nav ul li:first-child {
+    border: unset;
+  }
+
+  body > main > section article form p label{
+    width: var(--colonne-1-2);
+  }
+
+  body > main > section article form p input[type="text"],
+  body > main > section article form p input[type="email"],
+  body > main > section article form p input[type="tel"],
+  body > main > section article form p select {
+    width: var(--colonne-1-2);
+  }
+
+  body > main > section article form p textarea {
+    width: var(--colonne-1-1);
+  }
+
+  .colonne-footer {
+    width: var(--colonne-1-2);
+  }
+
+  body > footer > nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  body > main,
+  .nav-center {
+    width: 720px;
+  }
+
+  body > main > section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body > main > section .h1 {
+    width: 100%;
+  }
+
+  body > main > section article {
+    width: var(--colonne-1-2);
+  }
+
+  .colonne-footer {
+    width: var(--colonne-1-3);
+  }
+
+  body > main > section article form {
+    width: var(--colonne-3-4);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  body > main,
+  .nav-center {
+    width: 960px;
+  }
+
+  body > main > section article {
+    width: var(--colonne-1-3);
+  }
+}
+
+@media (min-width: 1200px) {
+  body > main,
+  .nav-center {
+    width: 1140px;
+  }
+
+  body > main > section article form {
+    width: var(--colonne-2-3);
+  }
+}
+
+@media (min-width: 1400px) {
+  body > main,
+  .nav-center {
+    width: 1320px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body > main,
+  .nav-center {
+    width: 1500px;
+  }
+
+  body > main > section article {
+    width: var(--colonne-1-4);
+  }
+
+  body > main > section article form {
+    width: var(--colonne-1-2);
+  }
+}
