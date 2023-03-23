@@ -33,14 +33,110 @@
                     <h2>Titre</h2>
                 </header>
                 <main class="article">
-                    <div>
-                        <aside>
-                            <h3>Encart</h3>
+                    <!-- la classe article appliquera en smartphone un flex column reverse -->
+                    <!-- la classe article appliquera en en affichage plus large un flex en ligne normal -->
+                    <div class="information">
+                        <!-- en smartphone, cette partie s'affichera en bas de page grâce au flex column reverse -->
+                        <!-- en affichage plus large, cette partie s'affichera à gauche grace au flex ligne normal -->
+                        <aside class="info pratique">
+                            <h4>Infos pratique</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto unde tempore recusandae cupiditate facilis nisi odit, aut eligendi, ut dignissimos optio est ipsa doloremque veniam at laudantium pariatur iure!
+                            </p>
+                        </aside>
+                        <aside class="info document">
+                            <h4>Document</h4>
+                            <ul>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                                <li>liste X</li>
+                            </ul>
+                        </aside>
+                        <aside class="info autre">
+                            <h4>En complément</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, dolore eum? Id quam totam esse eius veritatis dolorem obcaecati, delectus repellat optio molestiae, ratione sint eum, error exercitationem impedit. Assumenda!
+                            </p>
+                            <ul>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                                <li>liste Y</li>
+                            </ul>
                         </aside>
                     </div>
-                    <div>
+                    <div class="content">
+                        <!-- en smartphone, cette partie s'affichera en haut de page grâce au flex column reverse -->
+                        <!-- en affichage plus large, cette partie s'affichera à droite grace au flex ligne normal -->
+                        <h3>Intro</h3>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores iste omnis quo, animi odit ex necessitatibus voluptates recusandae impedit eius magni doloribus, placeat atque pariatur. Aliquam, recusandae. Vel, id minus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab, alias nam non labore beatae tempora ex illum, a corporis dicta. Dolores eos, ad cumque architecto repellendus praesentium pariatur rem.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore! Asperiores accusantium id tempora magnam, minus quibusdam voluptatibus perferendis, similique sed soluta temporibus recusandae ipsum veritatis laborum ex a doloremque?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio nostrum reiciendis recusandae, obcaecati illo. Ratione non quo cumque eveniet aspernatur repudiandae praesentium, dolor fugiat odit quasi quidem magnam sequi.
+                        </p>
+                        <figure class="left img-article">
+                            <img src="./images/Terry_Pratchett_2005.jpg" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi eum totam temporibus! Ipsam earum nostrum minima eos, facilis tenetur culpa cumque sapiente a voluptatem explicabo aliquid, nemo perspiciatis fuga accusantium!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ea expedita sed voluptate reprehenderit temporibus eos! Maiores eveniet velit culpa ex! Iure, commodi excepturi. Mollitia sunt eaque quaerat cumque velit.
+                        </p>
+                        <h3>Partie 1</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab, alias nam non labore beatae tempora ex illum, a corporis dicta. Dolores eos, ad cumque architecto repellendus praesentium pariatur rem.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore! Asperiores accusantium id tempora magnam, minus quibusdam voluptatibus perferendis, similique sed soluta temporibus recusandae ipsum veritatis laborum ex a doloremque?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio nostrum reiciendis recusandae, obcaecati illo. Ratione non quo cumque eveniet aspernatur repudiandae praesentium, dolor fugiat odit quasi quidem magnam sequi.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi eum totam temporibus! Ipsam earum nostrum minima eos, facilis tenetur culpa cumque sapiente a voluptatem explicabo aliquid, nemo perspiciatis fuga accusantium!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ea expedita sed voluptate reprehenderit temporibus eos! Maiores eveniet velit culpa ex! Iure, commodi excepturi. Mollitia sunt eaque quaerat cumque velit.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas accusamus placeat impedit distinctio ex, provident modi vel cumque! Illum ipsam similique corporis est veniam repellat architecto cupiditate laboriosam deserunt modi.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque fugiat nisi repellendus! Minus ad, ipsam nihil praesentium expedita autem sunt odit voluptas soluta tenetur accusamus ab dolorem ea voluptatum magnam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cumque quaerat corporis labore, repellendus neque optio quod maiores necessitatibus possimus suscipit facere repudiandae eveniet officia facilis eligendi voluptates, consectetur in.
+                        </p>
+                        <figure class="right img-article">
+                            <img src="./images/Pratchett-01.jpg" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </figcaption>
+                        </figure>
+                        <h3>Partie 2</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab, alias nam non labore beatae tempora ex illum, a corporis dicta. Dolores eos, ad cumque architecto repellendus praesentium pariatur rem.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore! Asperiores accusantium id tempora magnam, minus quibusdam voluptatibus perferendis, similique sed soluta temporibus recusandae ipsum veritatis laborum ex a doloremque?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio nostrum reiciendis recusandae, obcaecati illo. Ratione non quo cumque eveniet aspernatur repudiandae praesentium, dolor fugiat odit quasi quidem magnam sequi.
+                        </p>
+                        <figure class="left img-article">
+                            <img src="./images/Terry_Pratchett_COA.svg" />
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi eum totam temporibus! Ipsam earum nostrum minima eos, facilis tenetur culpa cumque sapiente a voluptatem explicabo aliquid, nemo perspiciatis fuga accusantium!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ea expedita sed voluptate reprehenderit temporibus eos! Maiores eveniet velit culpa ex! Iure, commodi excepturi. Mollitia sunt eaque quaerat cumque velit.
+                        </p>
+                        <h3>Conclusion</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab, alias nam non labore beatae tempora ex illum, a corporis dicta. Dolores eos, ad cumque architecto repellendus praesentium pariatur rem.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, dolore! Asperiores accusantium id tempora magnam, minus quibusdam voluptatibus perferendis, similique sed soluta temporibus recusandae ipsum veritatis laborum ex a doloremque?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio nostrum reiciendis recusandae, obcaecati illo. Ratione non quo cumque eveniet aspernatur repudiandae praesentium, dolor fugiat odit quasi quidem magnam sequi.
                         </p>
                     </div>
                 </main>

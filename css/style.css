@@ -52,6 +52,12 @@ si 2rem = 32 px, 1rem = 16px
   --main-footer-bg-color: #736451;
   --vert-paques: #668c2b;
   --h1-font-color: #f22e3e;
+  --info-pratique-bg: rgb(205, 236, 245);
+  --info-pratique-border: rgb(114, 153, 163);
+  --info-document-bg: rgb(205, 245, 225);
+  --info-document-border: rgb(102, 139, 120);
+  --info-autre-bg: rgb(229, 206, 245);
+  --info-autre-border: rgb(119, 89, 139);
   /*--special-bg: linear-gradient(to bottom, var(--vert-paques), var(--page-header-bg-color) 90%) ,var(--page-header-bg-color);*/
   --special-bg: url("../images/alice-cards-design.jpg") center center no-repeat;
   color: var(--main-font-color);
@@ -180,6 +186,39 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.article{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.article .left{
+    float: left;
+}
+
+.article .right{
+    float: right;
+}
+
+.info{
+    border: 2px solid transparent;
+    border-radius: 0.8rem;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.pratique{
+    background-color: var(--info-pratique-bg);
+    border-color: var(--info-pratique-border);
+}
+.document{
+    background-color: var(--info-document-bg);
+    border-color: var(--info-document-border);
+}
+.autre{
+    background-color: var(--info-autre-bg);
+    border-color: var(--info-autre-border);
 }
 
 /* déclaration de structure */
@@ -375,6 +414,10 @@ body > footer {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .img-article{
+    max-width: var(--colonne-1-2);
+  }
 }
 
 @media (min-width: 992px) {
@@ -386,6 +429,23 @@ body > footer {
   body > main > section article {
     width: var(--colonne-1-3);
   }
+
+  .article{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .information{
+    width: var(--colonne-1-3);
+  }
+
+  .content{
+    width: var(--colonne-2-3);
+  }
+
+  .img-article{
+    max-width: var(--colonne-1-3);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -396,6 +456,14 @@ body > footer {
 
   body > main > section article form {
     width: var(--colonne-2-3);
+  }
+
+  .information{
+    width: var(--colonne-1-4);
+  }
+
+  .content{
+    width: var(--colonne-3-4);
   }
 }
 
