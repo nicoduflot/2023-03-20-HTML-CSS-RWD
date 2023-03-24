@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/*
+map des breakpoints
+*/
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  --main-color: #0b0d09;
+}
+
+@font-face {
+  font-family: "wonderland2";
+  src: url("../fonts/wonderland2.eot");
+  src: url("../fonts/wonderland2.eot") format("embedded-opentype"), url("../fonts/wonderland2.woff2") format("woff2"), url("../fonts/wonderland2.woff") format("woff"), url("../fonts/wonderland2.ttf") format("truetype"), url("../fonts/wonderland2.svg#wonderland2") format("svg");
+}
+/*
+map des breakpoints
+*/
+/* déclarations générale */
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "wonderland2";
+}
+
+.toto {
+  font-weight: bold;
+}
+
+.info {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+}
+
+.alert {
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
+}
+
+.success {
+  background: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff;
+}
+
+/*
+map des breakpoints
+*/
+/* déclaration de structure */
+body {
+  margin: 0;
+}
+body > header {
+  text-align: center;
+}
+body > main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* générer les media queries */
+@media screen and (min-width: 576px) {
+  /* sm => 576px */
+  body > main {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* md => 768px */
+  body > main {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* lg => 992px */
+  body > main {
+    width: 940px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* xl => 1200px */
+  body > main {
+    width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* xxl => 1400px */
+  body > main {
+    width: 1320px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  /* xxxl => 1600px */
+  body > main {
+    width: 1500px;
+  }
+}
+
+/*# sourceMappingURL=sass.css.map */

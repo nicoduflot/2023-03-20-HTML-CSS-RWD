@@ -1,0 +1,28 @@
+@use "sass:map";
+@import "_variables";
+
+/* déclaration de structure */
+body{
+    margin: 0;
+    >header{
+        text-align: center;
+    }
+
+    >main{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+  /* générer les media queries */
+
+  @each $breakpoint, $value in $breakpoints{
+      @media screen and (min-width: #{$value}){
+        /* #{$breakpoint} => #{$value} */
+        body > main{
+            width: #{map.get($breakpoint-limit, $breakpoint)};
+        }
+    }
+  }

@@ -1,0 +1,26 @@
+@use "sass:map";
+@import "_variables";
+@import "_mixins";
+/* déclarations générale */
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-family: 'wonderland2';
+}
+
+.#{$toto}{
+    font-weight: bold;
+}
+
+.info {
+    @include theme;
+  }
+  .alert {
+    @include theme($theme: DarkRed);
+  }
+  .success {
+    @include theme($theme: DarkGreen);
+  }
+
