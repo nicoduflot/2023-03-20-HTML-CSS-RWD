@@ -193,11 +193,11 @@ video {
     flex-direction: column-reverse;
 }
 
-.article .left{
+.left{
     float: left;
 }
 
-.article .right{
+.right{
     float: right;
 }
 

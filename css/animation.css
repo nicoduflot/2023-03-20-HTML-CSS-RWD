@@ -1,0 +1,68 @@
+.translation{
+    transition: transform 0.5s;
+}
+
+.translation:hover{
+    transform: translate(30px, -50px);
+}
+
+.scale{
+    transition: background-color 1s, color 1s 1s, box-shadow 0.5s ease-out;
+}
+
+.scale:hover{
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px red;
+}
+
+.rotate{
+    transition: transform 0.2s;
+}
+
+.rotate:hover{
+    transform: rotate(360deg);
+}
+
+.espace-animation{
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%;
+    clear: both;
+}
+
+.cercle-animation{
+    width: 150px;
+    height: 150px;
+}
+
+.animation{
+    position: absolute;
+    animation-name: badge-qui-bouge;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /*
+    animation: name duration timing-function delay iteration-count direction;
+    */
+}
+
+@keyframes badge-qui-bouge {
+    0%{
+        left: 0%;
+        top:0%;
+        transform: rotate(0deg);
+    }
+    25%{
+        top: 50%;
+        transform: rotate(-180deg);
+    }
+    80%{
+        left: calc( 100% - 150px ) ;
+        top: 50%;
+    }
+    100%{
+        left: 0 ;
+        top: 0;
+    }
+}
