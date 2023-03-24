@@ -1,0 +1,21 @@
+:root{
+    --bs-carousel-smartphone-h: calc( 100vh * 0.3 );
+    --bs-custom-carousel-height: calc( 100vh * 0.3 );
+}
+
+.custom-carousel .carousel-inner{
+    height: var(--bs-carousel-smartphone-h);
+}
+
+.custom-carousel .img-fluid{
+    max-width: unset;
+    max-height: var(--bs-custom-carousel-height);
+}
+
+@media screen and (min-width: 576px) {
+    .custom-carousel .img-fluid,
+    .custom-carousel .carousel-inner {
+        --bs-custom-carousel-height: calc( 100vw * 0.3 );
+      height: var(--bs-custom-carousel-height) !important;
+    }
+  }
